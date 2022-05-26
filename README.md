@@ -28,6 +28,40 @@ Folder: gradio_app
 
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
+## Step 1: Class app
+
+Create a class called `app` that will be the main class of your application.
+
+In the class `app` you will add the following variables:
+- `model`: the model of your application
+- `epoch`: the number of epochs
+- `batch_size`: the batch size
+- `learning_rate`: the learning rate
+
+## Step 2: Add the dataset
+
+- In your class app create a variable `train_loader` and a variable `test_loader` that will contain the dataset.
+- In your class app you will create a variable `classes` that will contain the classes of your dataset.
+- Create a method called `add_dataset` that will return a dataloader.
+
+The `add_dataset` method will receive a `dataset_name`, `dataset_path` and if you want a train set or test set.
+
+To save execution time, you can check if the dataset is already downloaded or not in your `dataset` folder.
+
+## Step 3: Create the model
+
+Create a class called `model` that will contain the model of your application.
+
+In your init method of the class `model` you will add the following variables:
+- `conv1`: the first convolutional layer
+- `pool`: the pooling layer
+- `conv2`: the second convolutional layer
+- `linear1`: the first linear layer
+- `linear2`: the second linear layer
+- `linear3`: the third linear layer
+
+Create a forward method that will receive the input of your model and use the model variables.
+
 ## Writer
 
 | [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/laybraid) |
