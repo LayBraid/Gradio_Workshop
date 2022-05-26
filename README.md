@@ -24,6 +24,10 @@ Folder: gradio_app
 │   └── (Empty folder)
 ```
 
+## Step 0: Initialization
+
+All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
+
 ## Writer
 
 | [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/laybraid) |
