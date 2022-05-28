@@ -62,6 +62,16 @@ In your init method of the class `model` you will add the following attributes:
 
 Create a forward method that will receive the input of your model and use the model variables.
 
+## Step 4: Implement the training
+
+Create a method called `train` that will train your model.
+
+In the method `train` you will:
+- Create a loss function
+- Create a optimizer
+- Keep track of the loss and accuracy
+- Create a loop to train the model
+
 ## Writer
 
 | [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/laybraid) |
