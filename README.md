@@ -25,7 +25,7 @@ Folder: gradio_app
 │   └── (Empty folder)
 ```
 
-## Dataset (CHANGE THE DATASET)
+## Dataset (CHANGE THE DATASET AND ADD CLASSES)
 
 In this workshop you will use the [MNIST dataset](https://www.kaggle.com/c/digit-recognizer).
 
@@ -94,12 +94,68 @@ After your training, you will save the weights of your model in the `weights` fo
 
 ## Step 7: Predict an image
 
-Create a method named `predict` that will predict an image.
+Create a method named `predict_image` that will predict an image.
 This method will receive an image and return the prediction.
 The prediction is an element of the `classes` attribute.
 
-## Step 8: Create the Gradio interface
+## Step 9: Create the Gradio interface
 
+Create a gradio interface with for inputs an image.
+
+For this, you need a function called `execute_predict` (You will create this function in the next step) that will receive an image and return the prediction.
+
+## Step 10: Take image, reformat it and predict it
+
+In this step you will create a function called `execute_predict` that will receive an image and return the prediction.
+
+In reality your image is a numpy array.
+
+## Step 10.1: Reformat the image
+
+You must create a function called `reformat_image` that will reformat the image.
+
+For this function you must proceed as follows:
+- Convert your numpy array to a tensor image
+- Resize the image to 32x32 (Size of images in the dataset)
+- Reformat your image with a composed transformation (A composition of a resize and a conversion to tensor)
+
+## Step 10.2: Normalize the image
+
+You must create a function called `normalize_image` that will normalize the image.
+
+For normalize an image with a Normalize function you need to use the following parameters:
+- Mean
+- Std
+
+To calculate the mean and std of the dataset you need to create a function with the following process:
+- Create a variable called `channels_sum`, `channels_squared_sum` and `batch_num`
+- Create a loop that will iterate over the dataset
+  - Add to `channels_sum` the result of a function `mean` (the dimension for this is [0,2,3])
+  - Add to `channels_squared_sum` the result of a function `mean` (the dimension for this is [0,2,3]), don't forget to square the data before sending it to the function `mean`
+  - Add 1 to `batch_num`
+- Set `mean` variable to the result of `channels_sum` divided by `batch_num`
+- Set `std` variable to this equation: `std = sqrt(E[X^2] - (E[X])^2)`
+- Return the mean and std
+
+## Step 10.3: Execute the prediction
+
+With the last step, you are a tensor image, you need to convert this to a float image.
+
+Now you have all tools to predict an image.
+
+Use your `predict` function for return the prediction.
+
+## Step 11: Share your app on the Gradio platform
+
+With Gradio you can share your application. This is integrated in the Gradio interface. Check the [Gradio documentation](https://docs.gradio.org/en/latest/).
+
+Share your app with your friends and test it.
+
+## Step 12: Keep smiling 😃
+
+You have finished the workshop.
+
+Don't forget to share your code on the Github Classroom repository.
 
 
 ## Writer
