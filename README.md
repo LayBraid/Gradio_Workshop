@@ -5,6 +5,7 @@ Discover Gradio, a tool to create interfaces for your artificial intelligence ap
 You will:
 - Automatic download your dataset
 - Save and load your weights of your model
+- Display your accuracy and loss
 - Create a Gradio interface
 - Use different Gradio interfaces
 - Share your app on the Gradio platform
@@ -24,6 +25,10 @@ Folder: gradio_app
 │   └── (Empty folder)
 ```
 
+## Dataset (CHANGE THE DATASET)
+
+In this workshop you will use the [MNIST dataset](https://www.kaggle.com/c/digit-recognizer).
+
 ## Step 0: Initialization
 
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
@@ -37,6 +42,7 @@ In the class `app` you will add the following attributes:
 - `epoch`: the number of epochs
 - `batch_size`: the batch size
 - `learning_rate`: the learning rate
+- `classes`: the list of classes
 
 ## Step 2: Add the dataset
 
@@ -46,7 +52,10 @@ In the class `app` you will add the following attributes:
 
 The `add_dataset` method will receive a `dataset_name`, `dataset_path` and if you want a train set or test set.
 
-To save execution time, you can check if the dataset is already downloaded or not in your `dataset` folder.
+## Step 2.5: Check if the dataset is already downloaded
+
+In your method `add_dataset` you will check if the dataset is already downloaded.
+If it is downloaded, check if the dataset is correct.
 
 ## Step 3: Create the model
 
@@ -72,16 +81,31 @@ In the method `train` you will:
 - Keep track of the loss and accuracy
 - Create a loop to train the model
 
+## Step 5: Display the loss and accuracy
+
+Use Matplotlib for this step.
+
+In one figure you will display the loss and accuracy of the training.
+
+
+## Step 6: Save the weights
+
+After your training, you will save the weights of your model in the `weights` folder.
+
+## Step 7: Predict an image
+
+Create a method named `predict` that will predict an image.
+This method will receive an image and return the prediction.
+The prediction is an element of the `classes` attribute.
+
+## Step 8: Create the Gradio interface
+
+
+
 ## Writer
 
 | [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/laybraid) |
 |:---------------------------------------------------------------------------------------------------------------------------:|
-
-## Supervisor
-
-| [<img src="https://github.com/Mikatech.png?size=85" width=85><br><sub>Mikael VALLENET</sub>](https://github.com/Mikatech) |
-|:-------------------------------------------------------------------------------------------------------------------------:|
-
 
 <h2 align=center>
 Organization
