@@ -98,19 +98,19 @@ Create a method named `predict_image` that will predict an image.
 This method will receive an image and return the prediction.
 The prediction is an element of the `classes` attribute.
 
-## Step 9: Create the Gradio interface
+## Step 8: Create the Gradio interface
 
 Create a gradio interface with for inputs an image.
 
 For this, you need a function called `execute_predict` (You will create this function in the next step) that will receive an image and return the prediction.
 
-## Step 10: Take image, reformat it and predict it
+## Step 9: Take image, reformat it and predict it
 
 In this step you will create a function called `execute_predict` that will receive an image and return the prediction.
 
 In reality your image is a numpy array.
 
-## Step 10.1: Reformat the image
+## Step 9.1: Reformat the image
 
 You must create a function called `reformat_image` that will reformat the image.
 
@@ -119,7 +119,7 @@ For this function you must proceed as follows:
 - Resize the image to 32x32 (Size of images in the dataset)
 - Reformat your image with a composed transformation (A composition of a resize and a conversion to tensor)
 
-## Step 10.2: Normalize the image
+## Step 9.2: Normalize the image
 
 You must create a function called `normalize_image` that will normalize the image.
 
@@ -137,7 +137,7 @@ To calculate the mean and std of the dataset you need to create a function with 
 - Set `std` variable to this equation: `std = sqrt(E[X^2] - (E[X])^2)`
 - Return the mean and std
 
-## Step 10.3: Execute the prediction
+## Step 9.3: Execute the prediction
 
 With the last step, you are a tensor image, you need to convert this to a float image.
 
@@ -145,13 +145,13 @@ Now you have all tools to predict an image.
 
 Use your `predict` function for return the prediction.
 
-## Step 11: Share your app on the Gradio platform
+## Step 10: Share your app on the Gradio platform
 
 With Gradio you can share your application. This is integrated in the Gradio interface. Check the [Gradio documentation](https://docs.gradio.org/en/latest/).
 
 Share your app with your friends and test it.
 
-## Step 12: Keep smiling 😃
+## Step 11: Keep smiling 😃
 
 You have finished the workshop.
 
