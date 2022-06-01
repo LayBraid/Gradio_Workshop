@@ -25,7 +25,7 @@ Folder: gradio_app
 │   └── (Empty folder)
 ```
 
-## Dataset (CHANGE THE DATASET AND ADD CLASSES)
+## Dataset
 
 In this workshop you will use the [MNIST dataset](https://www.kaggle.com/c/digit-recognizer).
 
@@ -188,3 +188,9 @@ Organization
 </p>
 
 > :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+
+# TODO
+- Add classes in class app
+- Update dataset
+- Add documentations
+- Add images
